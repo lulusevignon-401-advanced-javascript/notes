@@ -6,3 +6,4 @@ const Notes = require('./lib/notes.js');
 
 const options = new Input();
 const notes = new Notes();
+console.log(options);
