@@ -27,7 +27,7 @@ describe('Input Module', () => {
 
   it('valid() rejects an invalid object', () => {
     let options = new Input();
-    options.command = {}; // break it
+    options.command = {}; 
     expect(options.valid()).toBeFalsy();
   });
 
