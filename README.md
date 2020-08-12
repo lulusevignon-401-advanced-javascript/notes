@@ -13,11 +13,13 @@
 - MONGODB_URI - URL to the running mongo instance/db
 
 #### How to initialize/run your application (where applicable)
-- e.g. npm start
+- node .
 #### How to use your library (where applicable)
 #### Tests
-- How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
+- npm test to run test
+    - parse() creates a good object
+    - valid() respects a proper object
+    - valid() rejects an invalid object
+
 #### UML
 Link to an image of the UML for your application and response to events
