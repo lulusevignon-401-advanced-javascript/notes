@@ -2,7 +2,7 @@
 
 require('@code-fellows/supergoose');
 
-const NotesCollection = require('../lib/models/notes-collectionjs');
+const NotesCollection = require('../lib/models/notes-collection.js');
 
 describe('Notes Collection', () => {
   
@@ -15,5 +15,9 @@ describe('Notes Collection', () => {
     const note = await notesCollection.create(noteData);
 
     expect(note._id).toBeDefined();
+    expect(note.text).toBe(noteData.text);
+    expect(note.category).toBe(noteData.category);
   });
+
+
 });

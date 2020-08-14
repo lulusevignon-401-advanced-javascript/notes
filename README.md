@@ -6,6 +6,7 @@
 - ci/cd (GitHub Actions)
 - back-end server url (when applicable)
 - front-end application (when applicable)
+
 ### Setup
 
 #### .env requirements (where applicable)
