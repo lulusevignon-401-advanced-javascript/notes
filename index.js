@@ -1,17 +1,32 @@
 #!/usr/bin/env node
 'use strict';
 
-const Input = require('./lib/input.js');
-const Notes = require('./lib/notes.js');
-// const { help } = require('yargs');
+const mongoose = require('mongoose');
 
-const options = new Input();
-const notes = new Notes(options);
+mongoose.connect('mongodb://localhost:27017/notesy',{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+// .then(()=>{
+//   console.log('connected');
+  
+  const Input = require('./lib/input.js');
+  const Notes = require('./lib/notes.js');
+  
+  const input = new Input();
+  const notes = new Notes();
 
-options.valid() ? notes.execute() : help();
-
-function help() {
-  console.log('Error');
-  process.exit();
-}
-
+  if (input.valid()){
+    notes.execute(input.command)
+    .then(mongoose.disconnect)
+    .catch(error => console.error(error));
+  } else {
+    help();
+  }
+  
+  function help() {
+    console.log('Error');
+    process.exit();
+  }
+  
+// }).catch((err) => console.log(err));
