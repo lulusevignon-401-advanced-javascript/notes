@@ -39,7 +39,7 @@
     - valid() rejects an invalid object
 
 
-### This app is created using the different technologies:
+### This app is created using the following technologies:
 - Node.js
 - ES6 Classes
 - Persistance using a Mongo Database
