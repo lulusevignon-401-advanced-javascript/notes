@@ -22,8 +22,8 @@
 
 ##### In order to see the full list of notes, run following command:
 
-- All Notes: `node notes.js --list`
-- Notes in a category: `node notes.js --list myNotes`
+- All Notes: `node index.js --list`
+- Notes in a category: `node index.js --list myNotes`
  
 ##### In order to delete a note, run following command:
 
