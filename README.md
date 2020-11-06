@@ -43,3 +43,5 @@
 - Node.js
 - ES6 Classes
 - Persistance using a Mongo Database
+- Mongoose Schemas to define and model the data for Mongo
+- Test Driven Development, using Jest
